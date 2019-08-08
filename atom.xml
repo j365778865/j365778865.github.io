@@ -5,9 +5,9 @@
   <subtitle>这是一个hexo测试博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://codepiglet.cn/"/>
-  <updated>2019-08-07T14:45:45.488Z</updated>
-  <id>http://codepiglet.cn/</id>
+  <link href="http://www.codepiglet.cn/"/>
+  <updated>2019-08-08T03:37:16.039Z</updated>
+  <id>http://www.codepiglet.cn/</id>
   
   <author>
     <name>Li</name>
@@ -18,29 +18,28 @@
   
   <entry>
     <title>&#39;my-first-post&#39;</title>
-    <link href="http://codepiglet.cn/other/my-first-post/"/>
-    <id>http://codepiglet.cn/other/my-first-post/</id>
+    <link href="http://www.codepiglet.cn/other/my-first-post/"/>
+    <id>http://www.codepiglet.cn/other/my-first-post/</id>
     <published>2019-08-07T14:26:31.000Z</published>
-    <updated>2019-08-07T14:45:45.488Z</updated>
+    <updated>2019-08-08T03:37:16.039Z</updated>
     
-    <content type="html"><![CDATA[<p>​    这是我第一篇hexo发布的文章</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="搭建博客实验"><a href="#搭建博客实验" class="headerlink" title="搭建博客实验"></a>搭建博客实验</h1>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;​    这是我第一篇hexo发布的文章&lt;/p&gt;
-
+        &lt;h1 id=&quot;搭建博客实验&quot;&gt;&lt;a href=&quot;#搭建博客实验&quot; class=&quot;headerlink&quot; title=&quot;搭建博客实验&quot;&gt;&lt;/a&gt;搭建博客实验&lt;/h1&gt;
       
     
     </summary>
     
-      <category term="other" scheme="http://codepiglet.cn/categories/other/"/>
+      <category term="other" scheme="http://www.codepiglet.cn/categories/other/"/>
     
     
-      <category term="post" scheme="http://codepiglet.cn/tags/post/"/>
+      <category term="post" scheme="http://www.codepiglet.cn/tags/post/"/>
     
-      <category term="第一次" scheme="http://codepiglet.cn/tags/%E7%AC%AC%E4%B8%80%E6%AC%A1/"/>
+      <category term="第一次" scheme="http://www.codepiglet.cn/tags/%E7%AC%AC%E4%B8%80%E6%AC%A1/"/>
     
   </entry>
   
