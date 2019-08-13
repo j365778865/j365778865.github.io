@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.codepiglet.cn">
-  <title>Archives | 人机都不赢</title>
+  <title>SpringCloud快速入门 | 人机都不赢</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="人机都不赢">
-<meta property="og:url" content="http://www.codepiglet.cn/archives/index.html">
+  <meta name="description" content="1.yml 配置数据库连接，密码最好加上双引号“密码” 2.发布euraka注册中心时，注意观看application.yml在class里面有没有编译更新 3.有两个重要参数可以修改服务续约的行为： 1234eureka:  instance:    lease-expiration-duration-in-seconds: 90    lease-renewal-interval-in-sec">
+<meta name="keywords" content="复习完springcloud进行项目实操">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringCloud快速入门">
+<meta property="og:url" content="http://www.codepiglet.cn/all/SpringCloud快速入门2/index.html">
 <meta property="og:site_name" content="人机都不赢">
+<meta property="og:description" content="1.yml 配置数据库连接，密码最好加上双引号“密码” 2.发布euraka注册中心时，注意观看application.yml在class里面有没有编译更新 3.有两个重要参数可以修改服务续约的行为： 1234eureka:  instance:    lease-expiration-duration-in-seconds: 90    lease-renewal-interval-in-sec">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-13T00:44:38.186Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="人机都不赢">
+<meta name="twitter:title" content="SpringCloud快速入门">
+<meta name="twitter:description" content="1.yml 配置数据库连接，密码最好加上双引号“密码” 2.发布euraka注册中心时，注意观看application.yml在class里面有没有编译更新 3.有两个重要参数可以修改服务续约的行为： 1234eureka:  instance:    lease-expiration-duration-in-seconds: 90    lease-renewal-interval-in-sec">
   
     <link rel="alternative" href="/atom.xml" title="人机都不赢" type="application/atom+xml">
   
@@ -172,65 +177,184 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-SpringCloud快速入门2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class=" article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/all/SpringCloud快速入门/" class="archive-article-date">
-        <time datetime="2019-08-13T00:28:09.238Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-13</time>
-</a>
-
-        </div>
-    	 
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/all/SpringCloud快速入门2/" class="archive-article-date">
-        <time datetime="2019-08-09T01:14:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	      <a class="archive-article-title" href="/all/SpringCloud快速入门2/" target="_blank">SpringCloud快速入门</a>
-        
+    <h1 class="article-title" itemprop="name">
+      SpringCloud快速入门
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
+  
+  
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/all/SpringCloud快速入门2/" class="archive-article-date">
+        <time datetime="2019-08-09T01:14:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
+</a>
+
+  
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>1.yml 配置数据库连接，密码最好加上双引号“密码”</p>
+<p>2.发布euraka注册中心时，注意观看application.yml在class里面有没有编译更新</p>
+<p>3.有两个重要参数可以修改服务续约的行为：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">eureka:</span></span><br><span class="line"><span class="attr">  instance:</span></span><br><span class="line"><span class="attr">    lease-expiration-duration-in-seconds:</span> <span class="number">90</span></span><br><span class="line"><span class="attr">    lease-renewal-interval-in-seconds:</span> <span class="number">30</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>lease-renewal-interval-in-seconds：服务续约(renew)的间隔，默认为30秒</li>
+<li>lease-expiration-duration-in-seconds：服务失效时间，默认值90秒</li>
+</ul>
+<a id="more"></a>
+
+<p>但是这给我们的开发带来了麻烦， 因此开发阶段我们都会关闭自我保护模式：（itcast-eureka）</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">eureka:</span></span><br><span class="line"><span class="attr">  server:</span></span><br><span class="line"><span class="attr">    enable-self-preservation:</span> <span class="literal">false</span> <span class="comment"># 关闭自我保护模式（缺省为打开）</span></span><br><span class="line"><span class="attr">    eviction-interval-timer-in-ms:</span> <span class="number">1000</span> <span class="comment"># 扫描失效服务的间隔时间（缺省为60*1000ms）</span></span><br></pre></td></tr></table></figure>
+
+<p>开发时候一定要配置</p>
+<p> 4.使用步骤  （1）导入依赖</p>
+<p>​                     （2）填写配置信息  spring.application.name，eureka.client.service-url.defautZone</p>
+<p>​                     （3）开启注解配置 @EnableEurekaServer @EnableDiscoveryClient</p>
+<p>​    </p>
+<h3 id="5-ribbon负载均衡"><a href="#5-ribbon负载均衡" class="headerlink" title="5.ribbon负载均衡"></a>5.ribbon负载均衡</h3><p>​      1.eureka自带ribbon，所以要使用ribbon只需要在RestTemplate上开启负载均衡@LoadBalanced</p>
+<p>用了负载均衡后调用服务只需要使用服务名就行 http：//<strong>service-provide</strong>/user/id</p>
+<p>​      </p>
+<h3 id="6-Hystrix熔断器"><a href="#6-Hystrix熔断器" class="headerlink" title="6.Hystrix熔断器"></a>6.Hystrix熔断器</h3><p>​     在服务调用方配置</p>
+<p>1.引入依赖 </p>
+<pre><code><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-hystrix<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+```</code></pre><p>  2.引导类开启熔断器@EnableCircuitBreaker</p>
+<p>​     一、单个熔断返回方法方法</p>
+<p>  3.编写一个熔断返回方法queryUserByIdFallback（Long id）要和方法一样</p>
+<p>  4.在方法上开启熔断器@HystrixCommand(fallbackMethod = “queryUserByIdFallback”)</p>
+<p>​    </p>
+<p>​    二、全局熔断返回方法方法</p>
+<p> 3.编写一个fuck（Long id)方法</p>
+<p> 4.<strong>在方法上开启熔断器@HystrixCommand</strong></p>
+<p>​     在类上加上注解@DefaultProperties（defaultFallBack=“fuck”）</p>
+<h1 id="设置超时"><a href="#设置超时" class="headerlink" title="设置超时"></a>设置超时</h1><pre><code>```yml
+hystrix:
+ command:
+   default:
+     execution:
+       isolation:
+         thread:
+           timeoutInMilliseconds: 6000 # 设置hystrix的超时时间为6000ms</code></pre><p>  组合注解@SpringCloudApplication =               @SpringBootApplication+@EnableDiscoverClient+@EnableCircuitBreaker</p>
+<h2 id="7-feign用法"><a href="#7-feign用法" class="headerlink" title="7.feign用法"></a>7.feign用法</h2><p>​          1.引入feign依赖</p>
+<pre><code>```xml
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-cloud-starter-openfeign&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre><p>​          2.使用方法</p>
+<p>​                     （1）<strong>在引导类开启feign引导，@EnableFeignClients</strong></p>
+<p>​                     （2）创建一个接口类A，接口上加上@FeignClient(“调用服务名”)</p>
+<p>​                                       接口里填写服务里要调用的方法，一模一样，就是没有方法体</p>
+<p>​                    （3）想要调用远程方法时，直接通过A来调用</p>
+<p>​          3.feign中hystrix的使用方法</p>
+<p>​                     （1）<strong>开启feign中的熔断功能</strong></p>
+<pre><code>```yaml
+feign:
+  hystrix:
+       enabled: true # 开启Feign的熔断功能</code></pre><p>​                    （2）在@FeignClient中指明一个已经实现的熔断类</p>
+<p>​                            @FeignClient（value=“service-provider”，fallback=UserClientFallBack.class）   </p>
+<p>​                    （3）编写熔断实现类                 </p>
+<h1 id="8-zuul"><a href="#8-zuul" class="headerlink" title="8.zuul"></a>8.zuul</h1><p>​           先来说说这样架构需要做的一些事儿以及存在的不足：</p>
+<ul>
+<li><p>破坏了服务无状态特点。</p>
+<p>为了保证对外服务的安全性，我们需要实现对服务访问的权限控制，而开放服务的权限控制机制将会贯穿并污染整个开放服务的业务逻辑，这会带来的最直接问题是，破坏了服务集群中REST API无状态的特点。</p>
+<pre><code>从具体开发和测试的角度来说，在工作中除了要考虑实际的业务逻辑之外，还需要额外考虑对接口访问的控制处理。</code></pre></li>
+<li><p>无法直接复用既有接口。</p>
+<p>当我们需要对一个即有的集群内访问接口，实现外部服务访问时，我们不得不通过在原有接口上增加校验逻辑，或增加一个代理调用来实现权限控制，无法直接复用原有的接口。</p>
+</li>
+</ul>
+<p>面对类似上面的问题，我们要如何解决呢？答案是：服务网关！</p>
+<p>为了解决上面这些问题，我们需要将权限控制这样的东西从我们的服务单元中抽离出去，而最适合这些逻辑的地方就是处于对外访问最前端的地方，我们需要一个更强大一些的均衡负载器的 服务网关。</p>
+<p>服务网关是微服务架构中一个不可或缺的部分。通过服务网关统一向外系统提供REST API的过程中，除了具备<code>服务路由</code>、<code>均衡负载</code>功能之外，它还具备了<code>权限控制</code>等功能。Spring Cloud Netflix中的Zuul就担任了这样的一个角色，为微服务架构提供了前门保护的作用，同时将权限控制这些较重的非业务逻辑内容迁移到服务路由层面，使得服务集群主体能够具备更高的可复用性和可测试性。</p>
+<hr>
+<p>​               1.引入依赖</p>
+<p>​               2.覆盖配置</p>
+<pre><code>```yaml
+zuul:
+  routes:
+    service-provider（服务名）:  /service-provider/**  3.第三种直接写地址
+  ## path: /service-provider/**  
+
+  ## url: http://localhost:8081   1.第一种手动配置url
+
+ ##  serviceId: service-provider   2.第二种和eureka结合，从注册中心中拿服务ip地址
+ eureka:
+  client:
+    service-url:
+      defaultZon: http://localhost:10089/eureka</code></pre>
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+      <div> 
+        <ul class="post-copyright">
+          <li>
+            <strong>本文作者：</strong>
+            Li
+          </li>
+          <li>
+            <strong>本文链接：</strong>
+            <a href="http://www.codepiglet.cn/all/SpringCloud快速入门2/" title="SpringCloud快速入门" target="_blank">http://www.codepiglet.cn/all/SpringCloud快速入门2/</a>
+          </li>
+          <li>
+            <strong>版权声明： </strong>
+            本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+          </li>
+        </ul>
+      </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -242,120 +366,116 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://www.codepiglet.cn/all/SpringCloud快速入门2/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/all/linux安装步骤/" class="archive-article-date">
-        <time datetime="2019-08-08T06:42:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-08</time>
-</a>
 
-        </div>
-    	 
+
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-	
-	      <a class="archive-article-title" href="/all/linux安装步骤/" target="_blank">linux安装步骤</a>
+    <a href="/all/SpringCloud快速入门/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
         
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">也包含了Linux的固定ip配置，以后Linux相关软件的安装配置也会陆续更新</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/other/my-first-post/" class="archive-article-date">
-        <time datetime="2019-08-07T14:26:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-07</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	      <a class="archive-article-title" href="/other/my-first-post/" target="_blank">&#39;my-first-post&#39;</a>
+          (no title)
         
-    </h1>
+      </div>
+    </a>
   
+  
+    <a href="/all/linux安装步骤/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux安装步骤</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">post</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">第一次</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/other//" class="article-tag-list-link color1">other</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+        
+        
+    </div>
+</aside>
 
-    
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -394,8 +514,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
