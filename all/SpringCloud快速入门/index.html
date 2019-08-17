@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.codepiglet.cn">
-  <title>人机都不赢</title>
+  <title>SpringCloud快速入门1 | 人机都不赢</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="description" content="1.系统架构演变​          分布式微服务我的最直白浅显的理解就是多台服务器搭建成集群，提供相同的服务。从而来减少服务器的压力，所提供的服务则是个性化定制上传上去的。当一台服务器挂了的时候，还有其他的可以来顶上。 ​">
+<meta name="keywords" content="SpringCloud相关组件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="人机都不赢">
+<meta property="og:title" content="SpringCloud快速入门1">
 <meta property="og:url" content="http://www.codepiglet.cn/all/SpringCloud快速入门/index.html">
 <meta property="og:site_name" content="人机都不赢">
 <meta property="og:description" content="1.系统架构演变​          分布式微服务我的最直白浅显的理解就是多台服务器搭建成集群，提供相同的服务。从而来减少服务器的压力，所提供的服务则是个性化定制上传上去的。当一台服务器挂了的时候，还有其他的可以来顶上。 ​">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.codepiglet.cn/all/SpringCloud快速入门/1525529091749.png">
 <meta property="og:image" content="http://www.codepiglet.cn/all/SpringCloud快速入门/1525530657919.png">
 <meta property="og:image" content="http://www.codepiglet.cn/all/SpringCloud快速入门/1526860071166.png">
 <meta property="og:image" content="http://www.codepiglet.cn/all/SpringCloud快速入门/1525573702492.png">
@@ -69,11 +69,11 @@
 <meta property="og:image" content="http://www.codepiglet.cn/all/SpringCloud快速入门/1525622817451.png">
 <meta property="og:image" content="http://www.codepiglet.cn/all/SpringCloud快速入门/1528782624098.png">
 <meta property="og:image" content="http://www.codepiglet.cn/all/SpringCloud快速入门/1528782514987.png">
-<meta property="og:updated_time" content="2019-08-13T00:42:41.997Z">
+<meta property="og:updated_time" content="2019-08-17T03:12:25.380Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="人机都不赢">
+<meta name="twitter:title" content="SpringCloud快速入门1">
 <meta name="twitter:description" content="1.系统架构演变​          分布式微服务我的最直白浅显的理解就是多台服务器搭建成集群，提供相同的服务。从而来减少服务器的压力，所提供的服务则是个性化定制上传上去的。当一台服务器挂了的时候，还有其他的可以来顶上。 ​">
-<meta name="twitter:image" content="http://www.codepiglet.cn/all/SpringCloud快速入门/1525529091749.png">
+<meta name="twitter:image" content="http://www.codepiglet.cn/all/SpringCloud快速入门/1525530657919.png">
   
     <link rel="alternative" href="/atom.xml" title="人机都不赢" type="application/atom+xml">
   
@@ -233,6 +233,30 @@
             <article id="post-SpringCloud快速入门" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class=" article-header">
+  
+  
+    <h1 class="article-title" itemprop="name">
+      SpringCloud快速入门1
+    </h1>
+  
+
+
+  
+  
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/all/SpringCloud快速入门/" class="archive-article-date">
+        <time datetime="2019-08-13T00:50:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-13</time>
+</a>
+
+  
+  
+  </header>
+  
   <div class="article-entry" itemprop="articleBody">
     
     <h1 id="1-系统架构演变"><a href="#1-系统架构演变" class="headerlink" title="1.系统架构演变"></a>1.系统架构演变</h1><p>​          分布式微服务我的最直白浅显的理解就是<strong>多台服务器搭建成集群，提供相同的服务。从而来减少服务器的压力，所提供的服务则是个性化定制上传上去的</strong>。当一台服务器挂了的时候，还有其他的可以来顶上。</p>
@@ -240,7 +264,6 @@
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.什么是springCloud?</span><br><span class="line">微服务架构的解决方案，是很多组件的集合</span><br><span class="line">eureka：注册中心，服务的注册与发现</span><br><span class="line">zull：网关协议，路由请求，过滤器（ribbon hystrix）</span><br><span class="line">ribbon：负载均衡组件</span><br><span class="line">hystrix：熔断组件</span><br><span class="line">feign：远程调用组件(ribbon hystrix)</span><br></pre></td></tr></table></figure>
 
 <h2 id="1-1-集中式架构"><a href="#1-1-集中式架构" class="headerlink" title="1.1.集中式架构"></a>1.1.集中式架构</h2><p>当网站流量很小时，只需一个应用，将所有功能都部署在一起，以减少部署节点和成本。此时，用于简化增删改查工作量的数据访问框架(ORM)是影响项目开发的关键。</p>
-<p> <img src="/all/SpringCloud快速入门/1525529091749.png" alt="1525529091749"></p>
 <p>存在的问题：</p>
 <ul>
 <li><strong>代码耦合，开发维护困难</strong></li>
@@ -705,7 +728,7 @@
           </li>
           <li>
             <strong>本文链接：</strong>
-            <a href="http://www.codepiglet.cn/all/SpringCloud快速入门/" title="" target="_blank">http://www.codepiglet.cn/all/SpringCloud快速入门/</a>
+            <a href="http://www.codepiglet.cn/all/SpringCloud快速入门/" title="SpringCloud快速入门1" target="_blank">http://www.codepiglet.cn/all/SpringCloud快速入门/</a>
           </li>
           <li>
             <strong>版权声明： </strong>
@@ -719,6 +742,17 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringCloud相关组件</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
